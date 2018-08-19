@@ -2,10 +2,20 @@
     <head>
         <meta charset='utf-8'>
     </head>
+
     <body>
-        <h1>
-            Hello world
-        </h1>
+        <h1>Choi Gun's Word</h1>
+        {{posts}}
+        <br>
+        <br>
+        <div>
+        {% for post in posts %}
+            <p>published : {{ post.published_date }}</p>
+            <h3>post tile: {{ post.title }}</h3>
+            <p>{{ post.text|linebreaksbr}}</p>
+        {% endfor %}
+        </div>
     </body>
+
 
 </html>
